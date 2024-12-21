@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #000330;
+    background-color: #000112;
     font-family: "Noto Sans", sans-serif;
     color: #ffffff;
     font-weight: 350;
@@ -63,35 +63,54 @@ small {
     font-size: 0.8em;
 }
 
-/* Link Settings */
-a:visited {
-    color: inherit;  /* Keeps the color the same as the default link color */
+.italic {
+    font-style: italic;
 }
 
 
-/* Hover styles*/
+/* Ensure the link color inherits from the body */
+a, a:visited, a:active {
+    color: inherit; /* Inherit color from parent (body or section) */
+}
+
+/* Hover styles */
 a:hover {
-    color: #c7c6ff;
+    color: #c7c6ff; /* Change color on hover */
 }
 
-/* Active link styles*/
+/* Active link styles */
 a:active {
     color: inherit; /* Keeps the color the same when the link is active */
 }
 
-.gallery-item {
-    max-width: 100%;
-    width: 100%;
-    margin-bottom: 2em; /* Adds space between the gallery items */
+.gallery-description {
+    max-width: 75%;
 }
 
+
+/* Gallery item styling */
+.gallery-item {
+    width: 60%; /* Set width to 22% for 4 items per row, adjust as needed */
+    box-sizing: border-box; /* Ensure padding and margin don't affect width */
+    margin-bottom: 4em; /* Adds space between image galleries */
+}
+
+/* Styling for the images inside gallery items */
 .gallery-item img {
-    width: 100%;
-    max-width: 75%;
+    width: 100%; /* Ensure the images fill the container */
     height: auto;
     display: block;
     box-shadow: 0 1em 1em 0 rgba(255, 244, 221, 0.315);
-    margin: 0 auto;
+}
+
+/* Styling for the description text */
+.gallery-description {
+    max-width: 100%;
+    margin: 0 auto 1em;
+    font-size: 1em;
+    text-align: left;
+    color: #ffffff;
+    font-family: "Noto Sans", sans-serif;
 }
 
 .footer-line {
