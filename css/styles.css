@@ -1,10 +1,43 @@
-/* styles.css */
+.noto-sans-normal {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #04002a;
+    font-family: "Noto Sans", sans-serif;
+    color: #ffffff;
+    /* margin: 5em; */
+}
+
+.container {
+    width: 66.67%; 
+    margin: 0 auto; 
+    padding: 5em;
+    text-align: left; 
+    box-sizing: border-box; 
 }
 
 h1 {
-    color: #002150;
+    color: #c7c6ff;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+}
+
+h2 {
+    color: #c7c6ff;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+}
+
+b {
+    color: #c7c6ff;
+    font-weight: 600;
+}
+  
+a:visited {
+color: inherit;  /* Keeps the color the same as the default link color */
 }
