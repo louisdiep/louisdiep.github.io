@@ -1,22 +1,29 @@
 .noto-sans-normal {
     font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 300;
+    font-weight: 100;
     font-style: normal;
     font-variation-settings: "wdth" 100;
 }
 
 body {
-    background-color: #04002a;
+    background-color: #000330;
     font-family: "Noto Sans", sans-serif;
     color: #ffffff;
+    font-weight: 350;
     /* margin: 5em; */
+}
+
+section {
+    padding: 10em 0em 10em 0em;
 }
 
 .container {
     width: 66.67%; 
     margin: 0 auto; 
     padding: 5em;
+    padding-top: 15em;
+    padding-bottom: 15em;
     text-align: left; 
     box-sizing: border-box; 
 }
@@ -24,20 +31,65 @@ body {
 h1 {
     color: #c7c6ff;
     font-family: "Noto Sans", sans-serif;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 h2 {
     color: #c7c6ff;
     font-family: "Noto Sans", sans-serif;
-    font-weight: 600;
+    font-weight: 400;
+}
+
+h3 {
+    color: #c7c6ff;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
 }
 
 b {
     color: #c7c6ff;
-    font-weight: 600;
+    font-weight: 400;
 }
-  
+
+small {
+    color: #c7c6ff;
+    font-size: 0.8em;
+}
+
+/* Link Settings */
 a:visited {
-color: inherit;  /* Keeps the color the same as the default link color */
+    color: inherit;  /* Keeps the color the same as the default link color */
+}
+
+
+/* Hover styles*/
+a:hover {
+    color: #c7c6ff;
+}
+
+/* Active link styles*/
+a:active {
+    color: inherit; /* Keeps the color the same when the link is active */
+}
+
+
+.gallery-entropy {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 0px;
+}
+
+.gallery-entropy-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* border-radius: 5px; */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.footer-line {
+    height: 1px; /* Thickness of the line */
+    background-color: #c7c6ff; /* Line color */
+    width: 100%; /* Full width */
+    margin-top: 10px; /* Space above the line */
 }
