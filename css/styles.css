@@ -28,6 +28,13 @@ section {
     box-sizing: border-box; 
 }
 
+h-name {
+    color: #c7c6ff;
+    font-size: 3em;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+}
+
 h1 {
     color: #c7c6ff;
     font-family: "Noto Sans", sans-serif;
@@ -72,21 +79,21 @@ a:active {
     color: inherit; /* Keeps the color the same when the link is active */
 }
 
-
-.gallery-entropy {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    padding: 0px;
+.gallery-item {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 2em; /* Adds space between the gallery items */
 }
 
-.gallery-entropy-item img {
+.gallery-item img {
     width: 100%;
+    max-width: 75%;
     height: auto;
     display: block;
-    /* border-radius: 5px; */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1em 1em 0 rgba(255, 244, 221, 0.315);
+    margin: 0 auto;
 }
+
 .footer-line {
     height: 1px; /* Thickness of the line */
     background-color: #c7c6ff; /* Line color */
