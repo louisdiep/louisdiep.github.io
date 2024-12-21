@@ -1,3 +1,13 @@
 # louisdiep.github.io
+# My Portfolio Website
 
-Welcome!
+This is my personal portfolio showcasing my coding projects, art, and design skills. Hosted on GitHub Pages.
+
+## Features
+- Responsive design
+- Projects section with links to GitHub repositories
+- Art gallery to showcase my artwork
+
+## How to use
+- Visit my website at https://louisdiep.github.io
+
