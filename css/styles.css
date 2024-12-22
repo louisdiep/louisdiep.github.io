@@ -7,11 +7,10 @@
 }
 
 body {
-    background-color: #000112;
+    background-color: #00033f;
     font-family: "Noto Sans", sans-serif;
     color: #ffffff;
     font-weight: 350;
-    /* margin: 5em; */
 }
 
 section {
@@ -21,16 +20,13 @@ section {
 .container {
     width: 66.67%; 
     margin: 0 auto; 
-    padding: 5em;
-    padding-top: 15em;
-    padding-bottom: 15em;
     text-align: left; 
     box-sizing: border-box; 
 }
 
 h-name {
     color: #c7c6ff;
-    font-size: 3em;
+    font-size: 4em;
     font-family: "Noto Sans", sans-serif;
     font-weight: 400;
 }
@@ -70,52 +66,43 @@ small {
 
 /* Ensure the link color inherits from the body */
 a, a:visited, a:active {
-    color: inherit; /* Inherit color from parent (body or section) */
+    color: inherit;
 }
 
 /* Hover styles */
 a:hover {
-    color: #c7c6ff; /* Change color on hover */
+    color: #c7c6ff; 
 }
 
 /* Active link styles */
 a:active {
-    color: inherit; /* Keeps the color the same when the link is active */
-}
-
-.gallery-description {
-    max-width: 75%;
+    color: inherit; 
 }
 
 
-/* Gallery item styling */
-.gallery-item {
-    width: 60%; /* Set width to 22% for 4 items per row, adjust as needed */
-    box-sizing: border-box; /* Ensure padding and margin don't affect width */
-    margin-bottom: 4em; /* Adds space between image galleries */
+
+/* Painting Gallery Section */
+.painting-gallery-section {
+    width: 100%; 
+    display: flex;      
+    justify-content: center; 
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Styling for the images inside gallery items */
-.gallery-item img {
-    width: 100%; /* Ensure the images fill the container */
-    height: auto;
-    display: block;
-    box-shadow: 0 1em 1em 0 rgba(255, 244, 221, 0.315);
+/* Images inside the section */
+.painting-gallery-section img {
+    display: block;        
+    width: auto;           
+    height: 90vh;          
+    object-fit: cover;
+    padding: 1rem;     
 }
 
-/* Styling for the description text */
-.gallery-description {
-    max-width: 100%;
-    margin: 0 auto 1em;
-    font-size: 1em;
-    text-align: left;
-    color: #ffffff;
-    font-family: "Noto Sans", sans-serif;
-}
 
 .footer-line {
-    height: 1px; /* Thickness of the line */
-    background-color: #c7c6ff; /* Line color */
-    width: 100%; /* Full width */
-    margin-top: 10px; /* Space above the line */
+    height: 1px; 
+    background-color: #c7c6ff; 
+    width: 100%; 
+    margin-top: 40px; 
 }
