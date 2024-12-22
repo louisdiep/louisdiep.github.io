@@ -1,13 +1,4 @@
-/* .noto-sans-normal {
-    font-family: "Noto Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-} */
-
-/* // <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 200 to 900 */
+/* styles.css */
 
 body, header, h-name, h1, h2, h3, b, small {
     font-optical-sizing: auto;
