@@ -6,7 +6,8 @@ This is my personal portfolio showcasing my coding projects, art, and design ski
 ## Features
 - Responsive design
 - Projects section with links to GitHub repositories
-- Art gallery to showcase my artwork
+- Art gallery to showcase artworks
+- Custom icons
 
 ## How to use
 - Visit my website at https://louisdiep.github.io
