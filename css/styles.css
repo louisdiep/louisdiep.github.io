@@ -23,7 +23,24 @@ section {
 }
 
 img {
-    padding-right: 2em;
+    display: block;        
+    max-width: 100%;       
+    width: auto;           
+    height: auto;          
+}
+
+.img-link-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 1em;
+    align-items: normal;
+}
+
+.img-link-container img {
+    height: 4em;
+    width: auto;
+    display: block;
 }
 
 /* stop hyperlinked images from being underlined */
@@ -34,6 +51,11 @@ img {
    border-width: 0px;
    outline-width:0px;
    border-bottom: none;
+   width: auto;
+   height: 4em;
+   padding-top: 1em;
+   padding-right: 2em;
+   padding-bottom: 1em;
 }
 
 
@@ -118,9 +140,11 @@ a:active {
 /* Images inside the section */
 .painting-gallery-section img {
     display: block;        
+    max-width: 100%;       
+    max-height: 90vh;      
     width: auto;           
-    height: 90vh;          
-    object-fit: cover;
+    height: auto;          
+    object-fit: contain;  
     padding: 1rem;     
 }
 
