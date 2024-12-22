@@ -24,6 +24,10 @@ section {
     box-sizing: border-box; 
 }
 
+header {
+    padding: 10em 0em 0em 0em;
+}
+
 h-name {
     color: #c7c6ff;
     font-size: 4em;
