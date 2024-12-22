@@ -1,16 +1,30 @@
-.noto-sans-normal {
+/* .noto-sans-normal {
     font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 100;
     font-style: normal;
     font-variation-settings: "wdth" 100;
+} */
+
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 200 to 900 */
+
+body, header, h-name, h1, h2, h3, b, small {
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
 }
 
 body {
     background-color: #00033f;
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Inconsolata", serif;
     color: #ffffff;
-    font-weight: 350;
+    font-weight: 400;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
 }
 
 section {
@@ -31,31 +45,32 @@ header {
 h-name {
     color: #c7c6ff;
     font-size: 4em;
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 400;
+    font-family: "Inconsolata", serif;
+    font-weight: 600;
+
 }
 
 h1 {
     color: #c7c6ff;
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 400;
+    font-family: "Inconsolata", serif;
+    font-weight: 600;
 }
 
 h2 {
     color: #c7c6ff;
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 400;
+    font-family: "Inconsolata", serif;
+    font-weight: 600;
 }
 
 h3 {
     color: #c7c6ff;
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 400;
+    font-family: "Inconsolata", serif;
+    font-weight: 600;
 }
 
 b {
     color: #c7c6ff;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 small {
