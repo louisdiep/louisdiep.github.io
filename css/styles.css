@@ -29,6 +29,10 @@ img {
     height: auto;          
 }
 
+#headshot {
+    width: 40em;       
+}
+
 .img-link-container {
     display: flex;
     flex-wrap: wrap;
