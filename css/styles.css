@@ -195,3 +195,45 @@ a:active {
     opacity: 0;
     transition: opacity 2s ease-out;
 }
+
+/* Carousel */
+/* Container that holds the carousel */
+.carousel-container {
+    position: relative;
+    width: 100vw;
+    height: 80vh;
+    overflow: hidden;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Carousel that holds the images */
+.carousel {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    animation: moveCarousel 10s linear infinite;
+}
+
+/* Styling for individual images */
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hover effect */
+/* .carousel-container:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+} */
+
+/* Keyframes to move the carousel */
+@keyframes moveCarousel {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
