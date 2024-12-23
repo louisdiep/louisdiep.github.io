@@ -1,54 +1,70 @@
 /* styles.css */
 
-body, header, h-name, h1, h2, h3, b, small {
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-variation-settings:
-    "wdth" 100;
-}
-
-body {
-    background-color: #00033f;
-    font-family: "Inconsolata", serif;
-    color: #ffffff;
-    font-weight: 400;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-variation-settings:
-    "wdth" 100;
+.header-padding {
+    height: 10rem;
 }
 
 section {
-    padding: 10em 0em 10em 0em;
+    padding: 10rem 0rem 10rem 0rem;
 }
 
 img {
     display: block;        
     max-width: 100%;       
     width: auto;           
-    height: auto;          
+    height: auto;
+}
+
+.container {
+    width: 66.67%; 
+    margin: 0 auto;
+    padding: 0 auto;
+    text-align: left; 
+    box-sizing: border-box; 
+}
+
+#headshot-container {
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 #headshot {
-    width: 40em;       
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    height: 60vh;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* For smaller screens (mobile devices) */
+@media (max-width: 768px) {
+    #headshot {
+        height: auto;
+        width: 100%;
+    }
 }
 
 .img-link-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
-    gap: 1em;
+    gap: 2rem;
+    padding-top: 2rem;
     align-items: normal;
 }
 
 .img-link-container img {
-    height: 4em;
+    height: 4rem;
     width: auto;
+    max-width: 100%;
     display: block;
 }
 
 /* stop hyperlinked images from being underlined */
-#img-link, #img-link img{
+.img-link, .img-link img{
    text-decoration: none !important;
    border:0px !important;
    outline:none;
@@ -56,58 +72,71 @@ img {
    outline-width:0px;
    border-bottom: none;
    width: auto;
-   height: 4em;
-   padding-top: 1em;
-   padding-right: 2em;
-   padding-bottom: 1em;
+   height: 4rem auto;
+   max-width: 100%;
 }
 
+/* Font Settings */
 
-.container {
-    width: 66.67%; 
-    margin: 0 auto; 
-    text-align: left; 
-    box-sizing: border-box; 
-}
-
-header {
-    padding: 10em 0em 0em 0em;
-}
-
-h-name {
-    color: #c7c6ff;
-    font-size: 4em;
+/* All fonts */
+body, h1, h2, h3, h4, h5, h6, p, b, small {
     font-family: "Inconsolata", serif;
-    font-weight: 600;
-
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
 }
 
-h1 {
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
     color: #c7c6ff;
-    font-family: "Inconsolata", serif;
-    font-weight: 600;
+    font-weight: 700;
+    line-height: 1.15;
+    margin: 0;
+    padding: 0;
 }
 
-h2 {
-    color: #c7c6ff;
-    font-family: "Inconsolata", serif;
-    font-weight: 600;
+body, p {
+    background-color: #00033f;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.618;
+    margin-bottom: 0.1rem;
+}
+
+h6 {
+    font-size: 1.618rem;
+}
+
+h5 {
+    font-size: 2.618rem;
+}
+
+h4 {
+    font-size: 4.236rem;
 }
 
 h3 {
+    font-size: 6.854rem;
+}
+
+h2 {
+    font-size: 11.09rem;
+}
+
+h1 {
+    font-size: 17.942rem;
+}
+
+small {
     color: #c7c6ff;
-    font-family: "Inconsolata", serif;
-    font-weight: 600;
+    font-size: 0.618rem;
 }
 
 b {
     color: #c7c6ff;
     font-weight: 600;
-}
-
-small {
-    color: #c7c6ff;
-    font-size: 0.8em;
 }
 
 .italic {
@@ -131,7 +160,6 @@ a:active {
 }
 
 
-
 /* Painting Gallery Section */
 .painting-gallery-section {
     width: 100%; 
@@ -152,10 +180,18 @@ a:active {
     padding: 1rem;     
 }
 
-
 .footer-line {
     height: 1px; 
     background-color: #c7c6ff; 
     width: 100%; 
-    margin-top: 40px; 
+}
+
+.footer-padding {
+    height: 10rem;
+}
+
+/* Example: Customizing the fade-in effect */
+.aos-fade-in {
+    opacity: 0;
+    transition: opacity 2s ease-out;
 }
