@@ -204,7 +204,7 @@ a:active {
     transition: opacity 0.3s ease;
 } */
 
-#painting-container {
+#infinite-paintings-banner-container {
     margin-top: 1rem;
     width: 200%;
     height: 75vh;
@@ -215,7 +215,7 @@ a:active {
     /* border: 1px solid red; */
 }
 
-#painting-container .scroll {
+#infinite-paintings-banner-container .scroll {
     display: flex;
     align-items: center;
     gap: 0;
@@ -227,16 +227,16 @@ a:active {
     /* border: 1px solid red; */
 }
 
-#painting-container .scroll#initial {
+#infinite-paintings-banner-container .scroll#initial {
     animation: initial-scroll 40s linear 1 forwards;
 }
 
-#painting-container .scroll#loop-one {
+#infinite-paintings-banner-container .scroll#loop-one {
     animation: loop 40s linear infinite;
     transform: translateX(100%);
 }
 
-#painting-container .scroll#loop-two {
+#infinite-paintings-banner-container .scroll#loop-two {
     animation: loop 40s linear infinite;
     transform: translateX(100%);
     animation-delay: 20s; 
@@ -252,7 +252,7 @@ a:active {
     100% { transform: translateX(-100%); }
 }
 
-#painting-container .scroll img {
+#infinite-paintings-banner-container .scroll img {
     height: auto; 
     width: 100%;
     object-fit: cover;
