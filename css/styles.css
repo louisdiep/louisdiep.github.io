@@ -1,5 +1,9 @@
 /* styles.css */
 
+.header-padding {
+    height: 5rem;
+}
+
 section {
     padding: 10rem 0rem 10rem 0rem;
 }
@@ -11,27 +15,40 @@ img {
     height: auto;
 }
 
+.container {
+    width: 66.67%; 
+    margin: 0 auto;
+    padding: 0 auto;
+    text-align: left; 
+    box-sizing: border-box; 
+}
+
 #headshot {
-    width: 40rem;       
+    margin-top: 2rem;
     margin-bottom: 2rem;
+    height: 60vh;
+    width: auto;
+    max-width: 100%;
 }
 
 .img-link-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
-    gap: 1rem;
+    gap: 2rem;
+    padding-top: 2rem;
     align-items: normal;
 }
 
 .img-link-container img {
     height: 4rem;
     width: auto;
+    max-width: 100%;
     display: block;
 }
 
 /* stop hyperlinked images from being underlined */
-#img-link, #img-link img{
+.img-link, .img-link img{
    text-decoration: none !important;
    border:0px !important;
    outline:none;
@@ -39,19 +56,8 @@ img {
    outline-width:0px;
    border-bottom: none;
    width: auto;
-   height: 4rem;
-   padding-top: 1rem;
-   padding-right: 2rem;
-   padding-bottom: 1rem;
-}
-
-
-.container {
-    width: 66.67%; 
-    margin: 0 auto; 
-    padding-top: 10rem;
-    text-align: left; 
-    box-sizing: border-box; 
+   height: 4rem auto;
+   max-width: 100%;
 }
 
 /* Font Settings */
@@ -158,10 +164,12 @@ a:active {
     padding: 1rem;     
 }
 
-
 .footer-line {
     height: 1px; 
     background-color: #c7c6ff; 
     width: 100%; 
-    margin-top: 40px; 
+}
+
+.footer-padding {
+    height: 5rem;
 }
