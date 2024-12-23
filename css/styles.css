@@ -23,12 +23,28 @@ img {
     box-sizing: border-box; 
 }
 
+#headshot-container {
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
 #headshot {
     margin-top: 2rem;
     margin-bottom: 2rem;
     height: 60vh;
     width: auto;
     max-width: 100%;
+    object-fit: contain;
+}
+
+/* For smaller screens (mobile devices) */
+@media (max-width: 768px) {
+    #headshot {
+        height: auto;
+        width: 100%;
+    }
 }
 
 .img-link-container {
@@ -75,7 +91,7 @@ body, h1, h2, h3, h4, h5, h6, p, b, small {
 h1, h2, h3, h4, h5, h6 {
     color: #c7c6ff;
     font-weight: 700;
-    line-height: 1.618;
+    line-height: 1.15;
     margin: 0;
     padding: 0;
 }
