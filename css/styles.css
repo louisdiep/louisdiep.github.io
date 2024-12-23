@@ -1,7 +1,7 @@
 /* styles.css */
 
 .header-padding {
-    height: 5rem;
+    height: 10rem;
 }
 
 section {
@@ -171,5 +171,11 @@ a:active {
 }
 
 .footer-padding {
-    height: 5rem;
+    height: 10rem;
+}
+
+/* Example: Customizing the fade-in effect */
+.aos-fade-in {
+    opacity: 0;
+    transition: opacity 2s ease-out;
 }
