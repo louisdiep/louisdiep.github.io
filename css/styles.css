@@ -197,19 +197,33 @@ padding: 1rem;
 }
 
 /* Infinite Paintings Banner */
-/* Acknowledgement: Infinitely Scrolling Banner based off https://stackoverflow.com/questions/55160794/infinite-scrolling-photo-banner-with-css */
-
-.photobanner {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
+/* Infinite Paintings Banner */
+.wrapper {
   overflow: hidden;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
 }
 
-.photobanner img {
-  top: 0;
-  width: 60vw; /* Image width as 60% of the viewport width */
-  position: absolute;
+.imageContainer {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  width: 200%;
 }
+
+.imageContainer .image {
+  flex-shrink: 0; /* Prevent images from shrinking */
+  width: auto; /* Allow width to adjust based on content */
+  height: 50vh; /* Fixed height */
+}
+
+.imageContainer img {
+  width: 100%; /* Ensure the image fills the container */
+  height: 100%; /* Ensure the image fills the container */
+  object-fit: cover; /* Maintain aspect ratio without distortion */
+}
+
+
+
+
+
+
