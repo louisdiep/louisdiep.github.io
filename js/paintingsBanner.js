@@ -17,6 +17,41 @@ Observer.create({
   onUp: () => setDirection(-1)
 })
 
+// Refresh the site if animation stops for some reason
+
+let lastX = [];
+let checkMovementInterval;
+
+function checkMovement() {
+  const elementsStopped = items.some((item, index) => {
+    let currentX = gsap.getProperty(item, "x");
+    if (currentX === lastX[index]) {
+      return true;
+    }
+    lastX[index] = currentX;
+    return false;
+  });
+
+  if (elementsStopped) {
+    // Refresh the page with cache clearing
+    window.location.reload(true);
+  }
+}
+
+// Initialize lastX with the current X positions of items
+items.forEach((item, index) => {
+  lastX[index] = gsap.getProperty(item, "x");
+});
+
+// Set up a periodic check for movement
+checkMovementInterval = setInterval(checkMovement, 1000); // Check every second
+
+// Clear the interval when the animation is complete or loop restarts
+tl.eventCallback("onReverseComplete", () => clearInterval(checkMovementInterval));
+tl.eventCallback("onComplete", () => clearInterval(checkMovementInterval));
+
+//
+
 /*
 This helper function makes a group of elements animate along the x-axis in a seamless, responsive loop.
 
