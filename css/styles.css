@@ -1,11 +1,7 @@
 /* styles.css */
 
-.header-padding {
-  height: 10rem;
-}
-
 section {
-  padding: 10rem 0rem 10rem 0rem;
+  padding: 5rem 0rem 5rem 0rem;
 }
 
 img {
@@ -57,7 +53,7 @@ img {
 }
 
 .img-link-container img {
-  height: 4rem;
+  height: 2rem;
   width: auto;
   max-width: 100%;
   display: block;
@@ -92,6 +88,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #c7c6ff;
   font-weight: 700;
   line-height: 1.15;
+  /* margin-bottom: 1.618rem; */
   margin: 0;
   padding: 0;
 }
@@ -134,7 +131,7 @@ small {
   font-size: 0.618rem;
 }
 
-b {
+blue {
   color: #c7c6ff;
   font-weight: 600;
 }
@@ -205,6 +202,7 @@ padding: 1rem;
   margin-top: 1rem;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   gap: 10px;
   width: 200%;
 }
@@ -221,6 +219,11 @@ padding: 1rem;
   object-fit: cover; /* Maintain aspect ratio without distortion */
 }
 
+
+.canvas {
+  /* box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); */
+  box-shadow: 0px -2px 2px rgba(34,34,34,0.6);
+}
 
 
 
