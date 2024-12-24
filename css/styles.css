@@ -197,12 +197,11 @@ padding: 1rem;
 }
 
 /* Infinite Paintings Banner */
-/* Infinite Paintings Banner */
-.wrapper {
+.paintings-banner-wrapper {
   overflow: hidden;
 }
 
-.imageContainer {
+.paintings-banner-container {
   margin-top: 1rem;
   display: flex;
   flex-direction: row;
@@ -210,13 +209,13 @@ padding: 1rem;
   width: 200%;
 }
 
-.imageContainer .image {
+.paintings-banner-container .image {
   flex-shrink: 0; /* Prevent images from shrinking */
   width: auto; /* Allow width to adjust based on content */
   height: 50vh; /* Fixed height */
 }
 
-.imageContainer img {
+.paintings-banner-container img {
   width: 100%; /* Ensure the image fills the container */
   height: 100%; /* Ensure the image fills the container */
   object-fit: cover; /* Maintain aspect ratio without distortion */

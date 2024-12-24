@@ -1,3 +1,6 @@
+// paintingsBanner.js using GSAP
+// Adapted from https://codepen.io/GreenSock/pen/NWMRwwZ?editors=0100 
+
 let loop = horizontalLoop(".image", {speed: 1, repeat: -1, paddingRight: 25});
 
 function setDirection(value) {
