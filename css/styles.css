@@ -197,126 +197,19 @@ padding: 1rem;
 }
 
 /* Infinite Paintings Banner */
-/* Acknowledgement: Infinitely Scrolling Banner based off https://medium.com/@archielister/make-an-infinitely-scrolling-banner-with-html-and-css-e7918506c496 */
+/* Acknowledgement: Infinitely Scrolling Banner based off https://stackoverflow.com/questions/55160794/infinite-scrolling-photo-banner-with-css */
 
-/* Hover effect */
-/* .carousel-container:hover {
-opacity: 0.8;
-transition: opacity 0.3s ease;
-} */
-
-/* .paintings-banner {
-margin-top: 1rem;
-width: 100%;
-height: 300rem;
-max-height: 75vh;
-position: relative;
-overflow: hidden;
-white-space: nowrap;
-align-items: center;
-}
-
-.paintings-banner .scroll {
-display: flex;
-align-items: center;
-gap: 0;
-justify-content: space-around;
-width: 100%;
-height: 100%;
-white-space: nowrap;
-position: absolute;
-}
-
-.paintings-banner .scroll img {
-height: auto; 
-width: 100%;
-object-fit: cover;
-display: flex;
-align-items: center;
-position: relative;
-overflow: hidden;
-white-space: nowrap;
-}
-
-.paintings-banner .scroll#initial {
-animation: initial-scroll 40s linear 1 forwards;
-}
-
-.paintings-banner .scroll#loop-one {
-animation: loop 40s linear infinite;
-transform: translateX(100%);
-}
-
-.paintings-banner .scroll#loop-two {
-animation: loop 40s linear infinite;
-transform: translateX(100%);
-animation-delay: 20s; 
-}
-
-@keyframes initial-scroll {
-0% { transform: translateX(0%); }
-100% { transform: translateX(-200%); }
-}
-
-@keyframes loop {
-0% { transform: translateX(100%); }
-100% { transform: translateX(-100%); }
-} */
-
-.paintings-banner {
-  --min-image-size: 50px;
-  --max-image-size: 100px;
-  --image-size: var(--max-image-size);
-  
-  border: 1px solid #575757;
-  padding: 20px;
+.photobanner {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
   overflow: hidden;
-  max-width: 900px;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
-.paintings-banner:hover div {
-  animation-play-state: paused;
-}
-
-.paintings-banner div {
-  display: flex;
-  position: relative;
-  animation: marquee 30s linear infinite;
-  justify-content: space-around;
-}
-
-.paintings-banner img {
-  display: block;
-  min-width: var(--image-size);
-  height: var(--image-size);
-  margin: 0 1vw;
-}
-
-.paintings-banner:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
+.photobanner img {
   top: 0;
-  background: linear-gradient(to right, white, rgba(255, 255, 255, 0) 80px, rgba(255, 255, 255, 0) calc(100% - 80px), white);
-}
-
-@media (max-width: 900px) {
-  .paintings-banner {
-    --image-size: min(max(var(--min-image-size), 10vw), var(--max-image-size));
-  }
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+  width: 60vw; /* Image width as 60% of the viewport width */
+  position: absolute;
 }
