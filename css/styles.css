@@ -1,265 +1,322 @@
 /* styles.css */
 
 .header-padding {
-    height: 10rem;
+  height: 10rem;
 }
 
 section {
-    padding: 10rem 0rem 10rem 0rem;
+  padding: 10rem 0rem 10rem 0rem;
 }
 
 img {
-    display: block;        
-    max-width: 100%;       
-    width: auto;           
-    height: auto;
+  display: block;        
+  max-width: 100%;       
+  width: auto;           
+  height: auto;
 }
 
 .container {
-    width: 66.67%; 
-    margin: 0 auto;
-    padding: 0 auto;
-    text-align: left; 
-    box-sizing: border-box; 
+  width: 66.67%; 
+  margin: 0 auto;
+  padding: 0 auto;
+  text-align: left; 
+  box-sizing: border-box; 
 }
 
-#headshot-container {
-    display: flex;
-    flex-direction: row wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+.headshot-container {
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-#headshot {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    height: 60vh;
-    width: auto;
-    max-width: 100%;
-    object-fit: contain;
+.headshot {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: 60vh;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 /* For smaller screens (mobile devices) */
 @media (max-width: 768px) {
-    #headshot {
-        height: auto;
-        width: 100%;
-    }
+  #headshot {
+    height: auto;
+    width: 100%;
+  }
 }
 
 .img-link-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
-    gap: 2rem;
-    padding-top: 2rem;
-    align-items: normal;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 2rem;
+  padding-top: 2rem;
+  align-items: normal;
 }
 
 .img-link-container img {
-    height: 4rem;
-    width: auto;
-    max-width: 100%;
-    display: block;
+  height: 4rem;
+  width: auto;
+  max-width: 100%;
+  display: block;
 }
 
 /* stop hyperlinked images from being underlined */
 .img-link, .img-link img{
-   text-decoration: none !important;
-   border:0px !important;
-   outline:none;
-   border-width: 0px;
-   outline-width:0px;
-   border-bottom: none;
-   width: auto;
-   height: 4rem auto;
-   max-width: 100%;
+  text-decoration: none !important;
+  border:0px !important;
+  outline:none;
+  border-width: 0px;
+  outline-width:0px;
+  border-bottom: none;
+  width: auto;
+  height: 4rem auto;
+  max-width: 100%;
 }
 
 /* Font Settings */
 
 /* All fonts */
 body, h1, h2, h3, h4, h5, h6, p, b, small {
-    font-family: "Inconsolata", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-variation-settings:
-    "wdth" 100;
+  font-family: "Inconsolata", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+  "wdth" 100;
 }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-    color: #c7c6ff;
-    font-weight: 700;
-    line-height: 1.15;
-    margin: 0;
-    padding: 0;
+  color: #c7c6ff;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0;
+  padding: 0;
 }
 
 body, p {
-    background-color: #00033f;
-    color: #ffffff;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.618;
-    margin-bottom: 0.1rem;
+  background-color: #00033f;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.618;
+  margin-bottom: 0.1rem;
 }
 
 h6 {
-    font-size: 1.618rem;
+  font-size: 1.618rem;
 }
 
 h5 {
-    font-size: 2.618rem;
+  font-size: 2.618rem;
 }
 
 h4 {
-    font-size: 4.236rem;
+  font-size: 4.236rem;
 }
 
 h3 {
-    font-size: 6.854rem;
+  font-size: 6.854rem;
 }
 
 h2 {
-    font-size: 11.09rem;
+  font-size: 11.09rem;
 }
 
 h1 {
-    font-size: 17.942rem;
+  font-size: 17.942rem;
 }
 
 small {
-    color: #c7c6ff;
-    font-size: 0.618rem;
+  color: #c7c6ff;
+  font-size: 0.618rem;
 }
 
 b {
-    color: #c7c6ff;
-    font-weight: 600;
+  color: #c7c6ff;
+  font-weight: 600;
 }
 
 .italic {
-    font-style: italic;
+  font-style: italic;
 }
 
 
 /* Ensure the link color inherits from the body */
 a, a:visited, a:active {
-    color: inherit;
+  color: inherit;
 }
 
 /* Hover styles */
 a:hover {
-    color: #c7c6ff; 
+  color: #c7c6ff; 
 }
 
 /* Active link styles */
 a:active {
-    color: inherit; 
+  color: inherit; 
 }
 
 
 /* Painting Gallery Section */
 /* .painting-gallery-section {
-    width: 100%; 
-    display: flex;      
-    justify-content: center; 
-    flex-direction: column;
-    align-items: center;
+width: 100%; 
+display: flex;      
+justify-content: center; 
+flex-direction: column;
+align-items: center;
 } */
 
 /* Images inside the section */
 /* .painting-gallery-section img {
-    display: block;        
-    max-width: 100%;       
-    max-height: 90vh;      
-    width: auto;           
-    height: auto;          
-    object-fit: contain;  
-    padding: 1rem;     
+display: block;        
+max-width: 100%;       
+max-height: 90vh;      
+width: auto;           
+height: auto;          
+object-fit: contain;  
+padding: 1rem;     
 } */
 
 .footer-line {
-    height: 1px; 
-    background-color: #c7c6ff; 
-    width: 100%; 
+  height: 1px; 
+  background-color: #c7c6ff; 
+  width: 100%; 
 }
 
 .footer-padding {
-    height: 10rem;
+  height: 10rem;
 }
 
 /* Example: Customizing the fade-in effect */
 .aos-fade-in {
-    opacity: 0;
-    transition: opacity 2s ease-out;
+  opacity: 0;
+  transition: opacity 2s ease-out;
 }
 
-/* Painting Banner */
+/* Infinite Paintings Banner */
+/* Acknowledgement: Infinitely Scrolling Banner based off https://medium.com/@archielister/make-an-infinitely-scrolling-banner-with-html-and-css-e7918506c496 */
 
 /* Hover effect */
 /* .carousel-container:hover {
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
+opacity: 0.8;
+transition: opacity 0.3s ease;
 } */
 
-#infinite-paintings-banner-container {
-    margin-top: 1rem;
-    width: 200%;
-    height: 75vh;
-    position: relative;
-    overflow: hidden;
-    white-space: nowrap;
-    align-items: center;
-    /* border: 1px solid red; */
+/* .paintings-banner {
+margin-top: 1rem;
+width: 100%;
+height: 300rem;
+max-height: 75vh;
+position: relative;
+overflow: hidden;
+white-space: nowrap;
+align-items: center;
 }
 
-#infinite-paintings-banner-container .scroll {
-    display: flex;
-    align-items: center;
-    gap: 0;
-    justify-content: space-around;
-    width: 100%;
-    height: 100%;
-    white-space: nowrap;
-    position: absolute;
-    /* border: 1px solid red; */
+.paintings-banner .scroll {
+display: flex;
+align-items: center;
+gap: 0;
+justify-content: space-around;
+width: 100%;
+height: 100%;
+white-space: nowrap;
+position: absolute;
 }
 
-#infinite-paintings-banner-container .scroll#initial {
-    animation: initial-scroll 40s linear 1 forwards;
+.paintings-banner .scroll img {
+height: auto; 
+width: 100%;
+object-fit: cover;
+display: flex;
+align-items: center;
+position: relative;
+overflow: hidden;
+white-space: nowrap;
 }
 
-#infinite-paintings-banner-container .scroll#loop-one {
-    animation: loop 40s linear infinite;
-    transform: translateX(100%);
+.paintings-banner .scroll#initial {
+animation: initial-scroll 40s linear 1 forwards;
 }
 
-#infinite-paintings-banner-container .scroll#loop-two {
-    animation: loop 40s linear infinite;
-    transform: translateX(100%);
-    animation-delay: 20s; 
+.paintings-banner .scroll#loop-one {
+animation: loop 40s linear infinite;
+transform: translateX(100%);
+}
+
+.paintings-banner .scroll#loop-two {
+animation: loop 40s linear infinite;
+transform: translateX(100%);
+animation-delay: 20s; 
 }
 
 @keyframes initial-scroll {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(-200%); }
+0% { transform: translateX(0%); }
+100% { transform: translateX(-200%); }
 }
 
 @keyframes loop {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+0% { transform: translateX(100%); }
+100% { transform: translateX(-100%); }
+} */
+
+.paintings-banner {
+  --min-image-size: 50px;
+  --max-image-size: 100px;
+  --image-size: var(--max-image-size);
+  
+  border: 1px solid #575757;
+  padding: 20px;
+  overflow: hidden;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
 }
 
-#infinite-paintings-banner-container .scroll img {
-    height: auto; 
-    width: 100%;
-    object-fit: cover;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    white-space: nowrap;
-    /* border: 1px solid red; */
+.paintings-banner:hover div {
+  animation-play-state: paused;
+}
+
+.paintings-banner div {
+  display: flex;
+  position: relative;
+  animation: marquee 30s linear infinite;
+  justify-content: space-around;
+}
+
+.paintings-banner img {
+  display: block;
+  min-width: var(--image-size);
+  height: var(--image-size);
+  margin: 0 1vw;
+}
+
+.paintings-banner:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: linear-gradient(to right, white, rgba(255, 255, 255, 0) 80px, rgba(255, 255, 255, 0) calc(100% - 80px), white);
+}
+
+@media (max-width: 900px) {
+  .paintings-banner {
+    --image-size: min(max(var(--min-image-size), 10vw), var(--max-image-size));
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
