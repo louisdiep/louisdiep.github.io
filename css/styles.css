@@ -212,7 +212,7 @@ padding: 1rem;
 .paintings-banner-container .image {
   flex-shrink: 0; /* Prevent images from shrinking */
   width: auto; /* Allow width to adjust based on content */
-  height: 50vh; /* Fixed height */
+  height: 30rem; /* Fixed height */
 }
 
 .paintings-banner-container img {
