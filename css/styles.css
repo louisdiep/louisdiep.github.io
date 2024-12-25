@@ -242,7 +242,7 @@ padding: 1rem;
   height: auto;
   min-height: 200px;
   overflow: hidden;
-  background-image: url("../assets/images/canvas.png");
+  background-image: url("../assets/images/canvas.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; 
