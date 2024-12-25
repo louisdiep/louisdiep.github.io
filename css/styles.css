@@ -13,8 +13,9 @@ img {
 
 .container {
   width: 66.67%; 
-  margin: 0 auto;
-  padding: 0 auto;
+  max-width: 66.67%;
+  margin: auto;
+  padding: auto;
   text-align: left; 
   box-sizing: border-box; 
 }
@@ -229,14 +230,31 @@ padding: 1rem;
 .text-box {
   margin-top: 1rem;
   position: relative;
-  display: inline-block;
+  display: block;
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  height: auto;
   min-height: 200px;
+  overflow: hidden;
   background-image: url("../assets/images/canvas.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; 
-  padding: 20px; 
+  padding: 40px; 
+  /* External shadow */
+  box-shadow: 
+  10px 10px 20px rgba(0, 0, 0, 0.6),   /* Dark shadow with larger blur */
+  5px 5px 10px rgba(0, 0, 0, 0.3);    /* Lighter shadow to create the depth */
+  /* Internal shadow for 3D effect */
+  box-shadow:
+  inset 2px 2px 8px rgba(0, 0, 0, 0.4),
+  inset -5px -5px 8px rgba(0, 0, 0, 0.6),
+  inset -5px -5px 8px rgba(0, 0, 0, 0.4),
+  inset -10px -10px 8px rgba(73, 71, 71, 0.147),
+  inset -6px -6px 8px rgba(37, 17, 216, 0.3), 
+  inset -1px -1px 8px rgba(0, 0, 154, 0.6); 
+  border-radius: 2px;  /* Optional: rounded corners */
 }
 
 .text-box h5, 
