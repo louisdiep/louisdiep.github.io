@@ -50,7 +50,7 @@ async function visitAndShakeTargets(targets) {
     const shakeDuration = 0.75;
     const shakeIntensity = 5;
     const shakeRepeats = 4;
-    const buffer = 0.25;
+    const buffer = 0.5;
 
     // Track timeouts to clear later
     const timeoutIds = [];

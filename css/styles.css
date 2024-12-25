@@ -76,7 +76,7 @@ img {
 /* Font Settings */
 
 /* All fonts */
-body, h1, h2, h3, h4, h5, h6, p, b, small {
+body {
   font-family: "Inconsolata", serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -98,7 +98,7 @@ body {
   background-color: #00033f;
 }
 
-p {
+p, ul {
   color: #ffffff;
   font-weight: 400;
   font-size: 1rem;
@@ -133,6 +133,10 @@ h1 {
 small {
   color: #c7c6ff;
   font-size: 0.618rem;
+}
+
+ul {
+  padding-left: 1.618rem;
 }
 
 blue {
@@ -241,7 +245,7 @@ padding: 1rem;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; 
-  padding: 40px; 
+  padding: 1.618rem; 
   /* External shadow */
   box-shadow: 
   10px 10px 20px rgba(0, 0, 0, 0.6),   /* Dark shadow with larger blur */
@@ -259,7 +263,7 @@ padding: 1rem;
 
 .text-box h5, 
 .text-box h6, 
-.text-box p {
+.text-box p, ul {
   color: #00033f;
 }
 
