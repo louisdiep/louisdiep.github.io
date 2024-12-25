@@ -1,43 +1,78 @@
 // paintingsBanner.js using GSAP
 // Adapted from https://codepen.io/GreenSock/pen/NWMRwwZ?editors=0100 
 
-let loop = horizontalLoop(".image", {speed: 0.6, repeat: -1, paddingRight: 10});
+// Function to start the animation loop after all images are loaded
+function startBannerAnimation() {
+    let loop = horizontalLoop(".image", {speed: 0.6, repeat: -1, paddingRight: 10});
+  
+    // Function to set animation direction
+    function setDirection(value) {
+      if (loop.direction !== value) {
+        gsap.to(loop, {timeScale: value, duration: 0.3, overwrite: true});
+        loop.direction = value;
+      }
+    }
+  
+    // Set the direction to always be positive (move left to right)
+    // Observer to handle user interaction and set direction
+    // Observer.create({
+    //   target: window,
+    //   type: "wheel,scroll,touch",
+    //   onDown: () => setDirection(1),
+    //   onUp: () => setDirection(-1)
+    // });
+  
+    // Clear the interval when the animation is complete or the loop restarts
+    loop.eventCallback("onReverseComplete", () => clearInterval(checkMovementInterval));
+    loop.eventCallback("onComplete", () => clearInterval(checkMovementInterval));
+}
+  
+// Wait until all images are fully loaded before starting the animation
+function waitForImagesToLoad() {
+  const images = document.querySelectorAll(".paintings-banner-container img");
+  let loadedCount = 0;
 
-// Function to set animation direction
-function setDirection(value) {
-  if (loop.direction !== value) {
-    gsap.to(loop, {timeScale: value, duration: 0.3, overwrite: true});
-    loop.direction = value;
+  images.forEach(image => {
+    if (image.complete) {
+      loadedCount++;
+    } else {
+      image.addEventListener("load", () => {
+        loadedCount++;
+        if (loadedCount === images.length) {
+          startBannerAnimation();
+        }
+      });
+      image.addEventListener("error", () => {
+        console.warn("Image failed to load: ", image.src);
+        loadedCount++;
+        if (loadedCount === images.length) {
+          startBannerAnimation();
+        }
+      });
+    }
+  });
+
+  if (loadedCount === images.length) {
+    startBannerAnimation();
   }
 }
 
-// Set the direction to always be positive (move left to right)
-// // Observer to handle user interaction and set direction
-// Observer.create({
-//   target: window,
-//   type: "wheel,scroll,touch",
-//   onDown: () => setDirection(1),
-//   onUp: () => setDirection(-1)
-// });
-
-// Clear the interval when the animation is complete or the loop restarts
-loop.eventCallback("onReverseComplete", () => clearInterval(checkMovementInterval));
-loop.eventCallback("onComplete", () => clearInterval(checkMovementInterval));
-
-/*
-This helper function makes a group of elements animate along the x-axis in a seamless, responsive loop.
-
-Features:
- - Uses xPercent so that even if the widths change (like if the window gets resized), it should still work in most cases.
- - When each item animates to the left or right enough, it will loop back to the other side
- - Optionally pass in a config object with values like "speed" (default: 1, which travels at roughly 100 pixels per second), paused (boolean), repeat, reversed, and paddingRight.
- - The returned timeline will have the following methods added to it:
-   - next() - animates to the next element using a timeline.tweenTo() which it returns. You can pass in a vars object to control duration, easing, etc.
-   - previous() - animates to the previous element using a timeline.tweenTo() which it returns. You can pass in a vars object to control duration, easing, etc.
-   - toIndex() - pass in a zero-based index value of the element that it should animate to, and optionally pass in a vars object to control duration, easing, etc. Always goes in the shortest direction
-   - current() - returns the current index (if an animation is in-progress, it reflects the final index)
-   - times - an Array of the times on the timeline where each element hits the "starting" spot. There's also a label added accordingly, so "label1" is when the 2nd element reaches the start.
- */
+waitForImagesToLoad();
+  
+  /*
+  This helper function makes a group of elements animate along the x-axis in a seamless, responsive loop.
+  
+  Features:
+   - Uses xPercent so that even if the widths change (like if the window gets resized), it should still work in most cases.
+   - When each item animates to the left or right enough, it will loop back to the other side
+   - Optionally pass in a config object with values like "speed" (default: 1, which travels at roughly 100 pixels per second), paused (boolean), repeat, reversed, and paddingRight.
+   - The returned timeline will have the following methods added to it:
+     - next() - animates to the next element using a timeline.tweenTo() which it returns. You can pass in a vars object to control duration, easing, etc.
+     - previous() - animates to the previous element using a timeline.tweenTo() which it returns. You can pass in a vars object to control duration, easing, etc.
+     - toIndex() - pass in a zero-based index value of the element that it should animate to, and optionally pass in a vars object to control duration, easing, etc. Always goes in the shortest direction
+     - current() - returns the current index (if an animation is in-progress, it reflects the final index)
+     - times - an Array of the times on the timeline where each element hits the "starting" spot. There's also a label added accordingly, so "label1" is when the 2nd element reaches the start.
+   */
 function horizontalLoop(items, config) {
   items = gsap.utils.toArray(items);
   config = config || {};
@@ -94,4 +129,4 @@ function horizontalLoop(items, config) {
     tl.reverse();
   }
   return tl;
-}
+}  
