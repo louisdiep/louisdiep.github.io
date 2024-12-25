@@ -80,6 +80,7 @@ body {
   font-family: "Inconsolata", serif;
   font-optical-sizing: auto;
   font-style: normal;
+  background-color: #00033f;
   font-variation-settings:
   "wdth" 100;
 }
@@ -92,10 +93,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1.618rem;
   margin: 0;
   padding: 0;
-}
-
-body {
-  background-color: #00033f;
 }
 
 p, ul {
@@ -185,7 +182,7 @@ a:active {
 .banner-wrapper {
   overflow: hidden;
   width: 100%;
-  height: 30rem;
+  height: 480px;
   margin-top: 1rem;
   position: relative;
 }
@@ -199,8 +196,8 @@ a:active {
 
 /* Banner images */
 .banner img {
-  width: auto;
-  height: 100%; /* Match the height of the wrapper */
+  width: 2652px;
+  height: 480px; /* Match the height of the wrapper */
   object-fit: contain;
   flex-shrink: 0; /* Prevent shrinking */
 }

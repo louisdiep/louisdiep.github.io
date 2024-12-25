@@ -3,22 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hi! I'm Louis, an Investment Banking Tech Intern at UBS and Computer Science student at UNSW, passionate about web development and painting.">
   <title>Louis Diep</title>
   
+  <!-- Critical CSS -->
+  <style>
+  </style>
   <link rel="stylesheet" href="css/styles.css">
-  
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@408&family=Noto+Sans:ital@0;1&display=swap" rel="stylesheet">
-  
-  <link rel="icon" href="assets/favicon_io/favicon.ico" type="image/x-icon">
-  
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@408&family=Noto+Sans:ital@0;1&display=swap" as="style" onload="this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@408&family=Noto+Sans:ital@0;1&display=swap" rel="stylesheet">
+  </noscript>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Observer.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollToPlugin.min.js"></script>
-</head>
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon_io/favicon.svg" type="image/svg+xml">
+
+  <!-- AOS CSS -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" as="style" onload="this.rel='stylesheet'">
+  <noscript>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  </noscript>
+</head>  
 
 <body>
   <div class="container">
@@ -33,14 +43,31 @@
           <b>painting</b>. I love finding ways to join art 
           and technology :)
       </p> -->
-      <h4 data-aos="fade-in">Louis Diep</h4>
+      <!-- <h4>Louis Diep</h4>
 
-      <p data-aos="fade-in">
+      <p>
         Hi! I'm Louis, a <blue>Investment Banking Tech Intern at <a href="https://www.ubs.com/au/en.html" target="_blank">UBS</a></blue> and <blue>Computer Science student at 
           <a href="https://www.unsw.edu.au/" target="_blank">UNSW</a></blue> who's interested in <blue>web development</blue> and
           <blue>painting</blue>.
+      </p> -->
+
+      <h4 style="color: #c7c6ff; font-weight: 700; line-height: 1.15; margin-bottom: 1.618rem; margin: 0; padding: 0; font-size: 4.236rem;">
+        Louis Diep
+      </h4>
+      
+      <p style="color: #ffffff; font-weight: 400; font-size: 1rem; line-height: 1.618; margin-bottom: 0.1rem;">
+        Hi! I'm Louis, a 
+        <span style="color: #c7c6ff; font-weight: 600;">Investment Banking Tech Intern at 
+          <a href="https://www.ubs.com/au/en.html" target="_blank" style="color: #c7c6ff; text-decoration: underline;">UBS</a>
+        </span> and 
+        <span style="color: #c7c6ff; font-weight: 600;">Computer Science student at 
+          <a href="https://www.unsw.edu.au/" target="_blank" style="color: #c7c6ff; text-decoration: underline;">UNSW</a>
+        </span> who's interested in 
+        <span style="color: #c7c6ff; font-weight: 600;">web development</span> and
+        <span style="color: #c7c6ff; font-weight: 600;">painting</span>.
       </p>
-      <p data-aos="fade-in">You can find <a href="assets/resume.pdf" target="_blank">my résumé here</a>.</p>
+      
+      <p>You can find <a href="assets/resume.pdf" target="_blank">my résumé here</a>.</p>
       <div data-aos="fade-in" class="img-link-container">
         <a class="img-link" id="email-icon" href="mailto:louiscdiep@gmail.com">
           <img class="img-link" src="assets/email-icon.webp" alt="Email louiscdiep@gmail.com">
@@ -49,10 +76,10 @@
           <img class="img-link" src="assets/linkedin-logo-34.png" alt="Visit my LinkedIn">
         </a>
         <a class="img-link" href="https://github.com/louisdiep" target="_blank">
-          <img class="img-link" src="assets/github-mark-white.png" alt="Visit my GitHub">
+          <img class="img-link" src="assets/github-icon.webp" alt="Visit my GitHub">
         </a>
         <a class="img-link" id="art-shop-icon" href="https://bluethumb.com.au/louis-diep" target="_blank">
-          <img class="img-link" src="assets/art-shop-icon-stacked.webp" alt="Visit my Bluethumb">
+          <img class="img-link" src="assets/art-shop-icon.webp" alt="Visit my Bluethumb">
         </a>
       </div>
     </section>
@@ -101,14 +128,22 @@
   
   <div class="footer-padding"></div>
     
-  <!-- Using AOS for animation -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- GSAP Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Observer.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollToPlugin.min.js" defer></script>
+
+  <!-- AOS for animation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
   <script>
-    AOS.init();
+    document.addEventListener('DOMContentLoaded', function () {
+      AOS.init();
+    });
   </script>
 
-  <script src="js/paintingsBanner.js"></script>
-  <script src="js/animations.js"></script>
+  <!-- Custom Scripts -->
+  <script src="js/paintingsBanner.js" defer></script>
+  <script src="js/animations.js" defer></script>
 </body>
 </html>
   
