@@ -1,7 +1,7 @@
 // paintingsBanner.js using GSAP
 // Adapted from https://codepen.io/GreenSock/pen/NWMRwwZ?editors=0100 
 
-let loop = horizontalLoop(".image", {speed: 0.75, repeat: -1, paddingRight: 10});
+let loop = horizontalLoop(".image", {speed: 0.6, repeat: -1, paddingRight: 10});
 
 // Function to set animation direction
 function setDirection(value) {
@@ -53,15 +53,36 @@ loop._targets.forEach((item, index) => {
   lastX[index] = gsap.getProperty(item, "xPercent");
 });
 
-// Set up a periodic check for movement
+// Function to check if the page is visible
+function isPageVisible() {
+    return document.visibilityState === 'visible';
+}
+  
 // Delay the first check by 1 second after page load
 setTimeout(() => {
-  // Set up a periodic check for movement (checking every 5 seconds after the first check)
-  checkMovementInterval = setInterval(checkMovement, 5000); // Check every 5 seconds
+    // Check the page visibility before starting the interval
+    if (isPageVisible()) {
+        // Set up a periodic check for movement (checking every 5 seconds after the first check)
+        checkMovementInterval = setInterval(() => {
+        if (isPageVisible()) {
+            checkMovement();
+        }
+        }, 10000); // Check every 10 seconds
 
-  // Run the first check after 1 second delay
-  checkMovement();
+        // Run the first check after 1 second delay
+        checkMovement();
+    } else {
+        console.log('Page is not visible. Movement checks will not start.');
+    }
 }, 1000); // 1000ms = 1 second
+
+// Listen for visibility change (when the page becomes visible again)
+document.addEventListener("visibilitychange", () => {
+    if (isPageVisible()) {
+      console.log('Page is back in view. Running the first check...');
+      setTimeout(() => {checkMovement(); }, 1000);
+    }
+});
 
 // Clear the interval when the animation is complete or the loop restarts
 loop.eventCallback("onReverseComplete", () => clearInterval(checkMovementInterval));
