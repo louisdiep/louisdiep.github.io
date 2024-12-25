@@ -1,197 +1,272 @@
 /* styles.css */
 
-.header-padding {
-    height: 10rem;
-}
-
 section {
-    padding: 10rem 0rem 10rem 0rem;
+  padding: 10rem 0rem 5rem 0rem;
 }
 
 img {
-    display: block;        
-    max-width: 100%;       
-    width: auto;           
-    height: auto;
+  display: block;        
+  max-width: 100%;       
+  width: auto;           
+  height: auto;
 }
 
 .container {
-    width: 66.67%; 
-    margin: 0 auto;
-    padding: 0 auto;
-    text-align: left; 
-    box-sizing: border-box; 
+  width: 66.67%; 
+  max-width: 66.67%;
+  margin: auto;
+  padding: auto;
+  text-align: left; 
+  box-sizing: border-box; 
 }
 
-#headshot-container {
-    display: flex;
-    flex-direction: row wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+.headshot-container {
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-#headshot {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    height: 60vh;
-    width: auto;
-    max-width: 100%;
-    object-fit: contain;
+.headshot {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: 60vh;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 /* For smaller screens (mobile devices) */
 @media (max-width: 768px) {
-    #headshot {
-        height: auto;
-        width: 100%;
-    }
+  #headshot {
+    height: auto;
+    width: 100%;
+  }
 }
 
 .img-link-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
-    gap: 2rem;
-    padding-top: 2rem;
-    align-items: normal;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 2rem;
+  padding-top: 2rem;
+  align-items: normal;
 }
 
 .img-link-container img {
-    height: 4rem;
-    width: auto;
-    max-width: 100%;
-    display: block;
+  height: 2rem;
+  width: auto;
+  max-width: 100%;
+  display: block;
 }
 
 /* stop hyperlinked images from being underlined */
 .img-link, .img-link img{
-   text-decoration: none !important;
-   border:0px !important;
-   outline:none;
-   border-width: 0px;
-   outline-width:0px;
-   border-bottom: none;
-   width: auto;
-   height: 4rem auto;
-   max-width: 100%;
+  text-decoration: none !important;
+  border:0px !important;
+  outline:none;
+  border-width: 0px;
+  outline-width:0px;
+  border-bottom: none;
+  width: auto;
+  height: 4rem auto;
+  max-width: 100%;
 }
 
 /* Font Settings */
 
 /* All fonts */
-body, h1, h2, h3, h4, h5, h6, p, b, small {
-    font-family: "Inconsolata", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-variation-settings:
-    "wdth" 100;
+body {
+  font-family: "Inconsolata", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+  "wdth" 100;
 }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-    color: #c7c6ff;
-    font-weight: 700;
-    line-height: 1.15;
-    margin: 0;
-    padding: 0;
+  color: #c7c6ff;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1.618rem;
+  margin: 0;
+  padding: 0;
 }
 
-body, p {
-    background-color: #00033f;
-    color: #ffffff;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.618;
-    margin-bottom: 0.1rem;
+body {
+  background-color: #00033f;
+}
+
+p, ul {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.618;
+  margin-bottom: 0.1rem;
 }
 
 h6 {
-    font-size: 1.618rem;
+  font-size: 1.618rem;
 }
 
 h5 {
-    font-size: 2.618rem;
+  font-size: 2.618rem;
 }
 
 h4 {
-    font-size: 4.236rem;
+  font-size: 4.236rem;
 }
 
 h3 {
-    font-size: 6.854rem;
+  font-size: 6.854rem;
 }
 
 h2 {
-    font-size: 11.09rem;
+  font-size: 11.09rem;
 }
 
 h1 {
-    font-size: 17.942rem;
+  font-size: 17.942rem;
 }
 
 small {
-    color: #c7c6ff;
-    font-size: 0.618rem;
+  color: #c7c6ff;
+  font-size: 0.618rem;
 }
 
-b {
-    color: #c7c6ff;
-    font-weight: 600;
+ul {
+  padding-left: 1.618rem;
+}
+
+blue {
+  color: #c7c6ff;
+  font-weight: 600;
 }
 
 .italic {
-    font-style: italic;
+  font-style: italic;
 }
 
 
 /* Ensure the link color inherits from the body */
 a, a:visited, a:active {
-    color: inherit;
+  color: inherit;
 }
 
 /* Hover styles */
 a:hover {
-    color: #c7c6ff; 
+  color: #c7c6ff; 
 }
 
 /* Active link styles */
 a:active {
-    color: inherit; 
+  color: inherit; 
 }
 
 
 /* Painting Gallery Section */
-.painting-gallery-section {
-    width: 100%; 
-    display: flex;      
-    justify-content: center; 
-    flex-direction: column;
-    align-items: center;
-}
+/* .painting-gallery-section {
+width: 100%; 
+display: flex;      
+justify-content: center; 
+flex-direction: column;
+align-items: center;
+} */
 
 /* Images inside the section */
-.painting-gallery-section img {
-    display: block;        
-    max-width: 100%;       
-    max-height: 90vh;      
-    width: auto;           
-    height: auto;          
-    object-fit: contain;  
-    padding: 1rem;     
-}
+/* .painting-gallery-section img {
+display: block;        
+max-width: 100%;       
+max-height: 90vh;      
+width: auto;           
+height: auto;          
+object-fit: contain;  
+padding: 1rem;     
+} */
 
 .footer-line {
-    height: 1px; 
-    background-color: #c7c6ff; 
-    width: 100%; 
+  height: 1px; 
+  background-color: #c7c6ff; 
+  width: 100%; 
 }
 
 .footer-padding {
-    height: 10rem;
+  height: 10rem;
 }
 
 /* Example: Customizing the fade-in effect */
 .aos-fade-in {
-    opacity: 0;
-    transition: opacity 2s ease-out;
+  opacity: 0;
+  transition: opacity 2s ease-out;
 }
+
+/* Infinite Paintings Banner */
+.paintings-banner-wrapper {
+  overflow: hidden;
+}
+
+.paintings-banner-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 10px;
+  width: 200%;
+}
+
+.paintings-banner-container .image {
+  flex-shrink: 0; /* Prevent images from shrinking */
+  width: auto; /* Allow width to adjust based on content */
+  height: 30rem; /* Fixed height */
+}
+
+.paintings-banner-container img {
+  width: 100%; /* Ensure the image fills the container */
+  height: 100%; /* Ensure the image fills the container */
+  object-fit: cover; /* Maintain aspect ratio without distortion */
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* Canvas */
+/* Canvas container */
+.text-box {
+  margin-top: 1rem;
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  height: auto;
+  min-height: 200px;
+  overflow: hidden;
+  background-image: url("../assets/images/canvas.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  padding: 1.618rem; 
+  /* External shadow */
+  box-shadow: 
+  10px 10px 20px rgba(0, 0, 0, 0.6),   /* Dark shadow with larger blur */
+  5px 5px 10px rgba(0, 0, 0, 0.3);    /* Lighter shadow to create the depth */
+  /* Internal shadow for 3D effect */
+  box-shadow:
+  inset 2px 2px 8px rgba(0, 0, 0, 0.4),
+  inset -5px -5px 8px rgba(0, 0, 0, 0.6),
+  inset -5px -5px 8px rgba(0, 0, 0, 0.4),
+  inset -10px -10px 8px rgba(73, 71, 71, 0.147),
+  inset -6px -6px 8px rgba(37, 17, 216, 0.3), 
+  inset -1px -1px 8px rgba(0, 0, 154, 0.6); 
+  border-radius: 2px;  /* Optional: rounded corners */
+}
+
+.text-box h5, 
+.text-box h6, 
+.text-box p, ul {
+  color: #00033f;
+}
+
+
+
+
