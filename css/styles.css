@@ -36,7 +36,6 @@ img {
   object-fit: contain;
 }
 
-/* For smaller screens (mobile devices) */
 @media (max-width: 768px) {
   #headshot {
     height: auto;
@@ -73,9 +72,6 @@ img {
   max-width: 100%;
 }
 
-/* Font Settings */
-
-/* All fonts */
 body {
   font-family: "Inconsolata", serif;
   font-optical-sizing: auto;
@@ -85,7 +81,6 @@ body {
   "wdth" 100;
 }
 
-/* Headings */
 h1, h2, h3, h4, h5, h6 {
   color: #c7c6ff;
   font-weight: 700;
@@ -146,17 +141,14 @@ blue {
 }
 
 
-/* Ensure the link color inherits from the body */
 a, a:visited, a:active {
   color: inherit;
 }
 
-/* Hover styles */
 a:hover {
   color: #c7c6ff; 
 }
 
-/* Active link styles */
 a:active {
   color: inherit; 
 }
@@ -171,14 +163,11 @@ a:active {
   height: 10rem;
 }
 
-/* Example: Customizing the fade-in effect */
 .aos-fade-in {
   opacity: 0;
   transition: opacity 2s ease-out;
 }
 
-/* Infinite Paintings Banner */
-/* Wrapper to control overflow */
 .banner-wrapper {
   overflow: hidden;
   width: 100%;
@@ -187,27 +176,19 @@ a:active {
   position: relative;
 }
 
-/* Container for the banner images */
 .banner {
   display: flex;
-  width: max-content; /* Allows the container to expand as needed */
-  height: 100%; /* Matches the height of the wrapper */
+  width: max-content;
+  height: 100%;
 }
 
-/* Banner images */
 .banner img {
   width: 2652px;
-  height: 480px; /* Match the height of the wrapper */
+  height: 480px;
   object-fit: contain;
-  flex-shrink: 0; /* Prevent shrinking */
+  flex-shrink: 0;
 }
 
-
-
-/* -------------------------------------------------------------------------- */
-
-/* Canvas */
-/* Canvas container */
 .text-box {
   margin-top: 1rem;
   position: relative;
@@ -223,11 +204,9 @@ a:active {
   background-position: center;
   background-repeat: no-repeat; 
   padding: 1.618rem; 
-  /* External shadow */
   box-shadow: 
-  10px 10px 20px rgba(0, 0, 0, 0.6),   /* Dark shadow with larger blur */
-  5px 5px 10px rgba(0, 0, 0, 0.3);    /* Lighter shadow to create the depth */
-  /* Internal shadow for 3D effect */
+  10px 10px 20px rgba(0, 0, 0, 0.6),
+  5px 5px 10px rgba(0, 0, 0, 0.3);
   box-shadow:
   inset 2px 2px 8px rgba(0, 0, 0, 0.4),
   inset -5px -5px 8px rgba(0, 0, 0, 0.6),
@@ -235,7 +214,7 @@ a:active {
   inset -10px -10px 8px rgba(73, 71, 71, 0.147),
   inset -6px -6px 8px rgba(37, 17, 216, 0.3), 
   inset -1px -1px 8px rgba(0, 0, 154, 0.6); 
-  border-radius: 2px;  /* Optional: rounded corners */
+  border-radius: 2px;
 }
 
 .text-box h5, 
